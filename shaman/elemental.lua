@@ -25,7 +25,7 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
  	--Survival Abilities
  	{ "Windwalk Totem", { "toggle.survival", "!player.buff", "player.state.root" }, "player" }, 
 	{ "Windwalk Totem", { "toggle.survival", "!player.buff", "player.state.snare" }, "player" }, 
-	{ "Cleanse Spirit", { "toggle.survival", "!modifier.last(Cleanse)", "player.dispellable(Cleanse)" }, "player" }, 
+	{ "Cleanse Spirit", { "toggle.survival", "!modifier.last(Cleanse Spirit)", "player.dispellable(Cleanse Spirit)" }, "player" }, 
  
 	-- Control Toggles
 	{ "Flame Shock", { "!modifier.multitarget", "mouseover.enemy", "mouseover.alive", "mouseover.deathin > 25", "mouseover.debuff(Flame Shock).duration <= 3", "toggle.mouseovers" }, "mouseover" },
