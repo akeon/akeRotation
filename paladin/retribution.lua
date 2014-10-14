@@ -1,11 +1,12 @@
 -- ProbablyEngine Rotation Packager
 PossiblyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
 -- Author: AkeRotations
--- Version 1.2 21/09/14 (MOP)
 
--- Changelog: 1.2 Add self heal toggle and update code.
--- Changelog: 1.1 Add AE rotation.
--- Changelog: 1.0 Finalised rotation for release.
+-- Version 1.3 14/10/14 Overhaul for 6.0.2
+-- Version 1.2 21/09/14 (MOP)
+-- Version: 1.2 Add self heal toggle and update code.
+-- Version: 1.1 Add AE rotation.
+-- Version: 1.0 Finalised rotation for release.
 
 -- Notes: Santified wrath as dps gain. Raid survivability is untested.
 -- Pause: Left Alt
@@ -31,49 +32,40 @@ PossiblyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
 	
  	-- Survivability
 	{ "Hand of Freedom", { "toggle.raidprotection", "!player.buff", "player.state.root" }, "player" },
-	{ "Hand of Freedom", { "toggle.raidprotection", "!player.buff", "player.state.snare" }, "player" },
 	{ "#5512", { "modifier.cooldowns", "player.health < 30" } }, -- Healthstone (5512)
 	{ "Cleanse", { "!modifier.last(Cleanse)", "player.dispellable(Cleanse)" }, "player" }, -- Cleanse Poison or Disease
 	
-    -- Raid Protection
+	 -- Raid Protection
 	{ "Flash of Light", { "toggle.raidprotection", "lowest.health < 25", "player.buff(Selfless Healer).count > 2" }, "lowest" },		
 	{ "Lay on Hands", { "toggle.raidprotection", "lowest.health < 15", "lowest" } },
 	{ "Hand of Protection", { "toggle.raidprotection", "lowest.exists", "lowest.alive", "lowest.friend", "lowest.isPlayer", "!lowest.role(tank)", "!lowest.immune.melee", "lowest.health <= 20" }, "lowest" },
 	
 	--Cooldowns
 	{ "Avenging Wrath", "modifier.cooldowns" },   
-	{ "Guardian of Ancient Kings", "modifier.cooldowns" },
 	{ "Holy Avenger", { "modifier.cooldowns", "player.holypower < 3" } },
 
  	-- Mouseovers
 	{ "Light's Hammer", { "modifier.lcontrol" }, "ground" },
 	
-	-- Out of Melee
-	{ "Judgment", "!target.spell(Crusader Strike).range" },
-    { "Hammer of Wrath", "!target.spell(Crusader Strike).range" },
-
-	-- Base Rotation
-	{ "Inquisition", { "player.holypower > 2", "player.buff(Inquisition).duration < 2" } },
-
 	-- AE
-	{ "Divine Storm", { "player.holypower > 4", "modifier.multitarget" } },
+	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.holypower > 4", "modifier.multitarget" } },
 	{ "Hammer of Wrath", "modifier.multitarget" },
 	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.buff(Divine Crusader)", "modifier.multitarget" } }, --T16 4Piece
-	{ "Hammer of the Righteous", "modifier.multitarget" },
+	{ "Hammer of the Righteous", { "target.spell(Crusader Strike).range", "modifier.multitarget" } },
 	{ "Judgment", "modifier.multitarget" },
 	{ "Exorcism", "modifier.multitarget" },	
-	{ "Divine Storm", { "player.holypower > 2", "modifier.multitarget" } },
+	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.holypower > 2", "modifier.multitarget" } },
 	
 	-- ST Rotation
+	{ "Templar's Verdict", "target.spell(Crusader Strike).range", "player.holypower > 4" },
 	{ "Execution Sentence" },
 	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.holypower > 4", "player.buff(Divine Crusader)" } }, --T16 4Piece
-	{ "Templar's Verdict", "player.holypower > 4" },
 	{ "Hammer of Wrath" },
-	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.buff(Divine Crusader)" } }, --T16 4Piece
-	{ "Crusader Strike" },
+	{ "Crusader Strike", "target.spell(Crusader Strike).range" },
 	{ "Judgment" },
+	{ "Divine Storm", { "target.spell(Crusader Strike).range", "player.buff(Divine Crusader)" } }, --T16 4Piece
 	{ "Exorcism" },	
-	{ "Templar's Verdict", "player.holypower > 2" },
+	{ "Templar's Verdict", { "target.spell(Crusader Strike).range", "player.holypower > 2" } },
 	
 
 },{
