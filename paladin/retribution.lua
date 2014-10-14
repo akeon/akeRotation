@@ -35,10 +35,10 @@ ProbablyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
 	{ "#5512", { "modifier.cooldowns", "player.health < 30" } }, -- Healthstone (5512)
 	{ "Cleanse", { "!modifier.last(Cleanse)", "player.dispellable(Cleanse)" }, "player" }, -- Cleanse Poison or Disease
 	
-	 -- Raid Protection
-	{ "Flash of Light", { "toggle.raidprotection", "lowest.health < 25", "player.buff(Selfless Healer).count > 2" }, "lowest" },		
-	{ "Lay on Hands", { "toggle.raidprotection", "lowest.health < 15", "lowest" } },
-	{ "Hand of Protection", { "toggle.raidprotection", "lowest.exists", "lowest.alive", "lowest.friend", "lowest.isPlayer", "!lowest.role(tank)", "!lowest.immune.melee", "lowest.health <= 20" }, "lowest" },
+	 -- Raid Healing and Protection
+	{ "Flash of Light", { "toggle.raidheal", "lowest.health < 25", "player.buff(Selfless Healer).count > 2" }, "lowest" },		
+	{ "Lay on Hands", { "toggle.raidheal", "lowest.health < 15", "lowest" } },
+	{ "Hand of Protection", { "toggle.raidheal", "lowest.exists", "lowest.alive", "lowest.friend", "lowest.isPlayer", "!lowest.role(tank)", "!lowest.immune.melee", "lowest.health <= 20" }, "lowest" },
 	
 	--Cooldowns
 	{ "Avenging Wrath", "modifier.cooldowns" },   
@@ -82,7 +82,7 @@ ProbablyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
  },
 function()
 	ProbablyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
-	ProbablyEngine.toggle.create('raidprotection', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
+	ProbablyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
 	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
 end
 )
