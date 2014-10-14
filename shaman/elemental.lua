@@ -1,6 +1,6 @@
--- ProbablyEngine Rotation Packager
 PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Author: AkeRotations
+-- Version: 1.3 14/10/14 Overhaul for 6.0.2. Add Unleash elements. Add Anscestral Swiftness. Revamp movement rotation in light of lightning bolt change.
 -- Version: 1.2 21/09/14 (MOP)
 -- Changelog: 1.2 Added earthquake.
 -- Changelog: 1.1 Further cast while moving optimisations.
@@ -20,17 +20,13 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	{ "Wind Shear", "modifier.interrupt" },
 
 	-- Self Heals
-	{ "Healing Surge", { "toggle.selfheal", "player.health < 40" } },
-	{ "Healing Stream Totem", { "toggle.selfheal", "!player.totem(Healing Stream Totem)", "player.health < 50" } },
+	{ "Healing Surge", { "toggle.selfheal", "player.health < 20" } },
+	{ "Healing Stream Totem", { "toggle.selfheal", "!player.totem(Healing Stream Totem)", "player.health < 30" } },
  
-	-- Mouseovers
+	-- Control Toggles
 	{ "Flame Shock", { "!modifier.multitarget", "mouseover.enemy", "mouseover.alive", "mouseover.deathin > 25", "mouseover.debuff(Flame Shock).duration <= 3", "toggle.mouseovers" }, "mouseover" },
 	{ "Earthquake", { "modifier.lcontrol" }, "ground" },
-	
-	-- Core Rotation
-	{ "Searing Totem", { "!modifier.multitarget", "!player.totem(Fire Elemental Totem)", "!player.totem(Searing Totem)" } },
-	{ "Flame Shock", { "!modifier.multitarget", "target.debuff(Flame Shock).duration <= 3", "!player.buff(Spiritwalker's Grace)" } },
-	
+
 	-- Cooldowns
 	{ "Stormlash Totem", { "modifier.cooldowns", "toggle.lash", "!totem(Stormlash Totem)" } },
 	{ "Fire Elemental Totem", "modifier.cooldowns" },
@@ -42,19 +38,25 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	-- Movement Rotation
 	{ "Flame Shock", { "player.moving", "target.debuff(Flame Shock).duration <= 3", "!player.buff(Spiritwalker's Grace)" } },
 	{ "Lava Burst", { "player.moving", "player.buff(Lava Surge)", "!player.buff(Spiritwalker's Grace)" } },
-	{ "Earth Shock", { "player.moving", "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 6", "!player.buff(Spiritwalker's Grace)" } },
-	{ "Lightning Bolt", { "player.moving", "!player.buff(Spiritwalker's Grace)" } },
+	{ "Earth Shock", { "player.moving", "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 15", "!player.buff(Spiritwalker's Grace)" } },
+	{ "Chain Lightning", { "player.moving", "toggle.cleavemode", "!player.buff(Ancestral Swiftness)", "!player.buff(Spiritwalker's Grace)" } },
+	{ "Chain Lightning", { "player.moving", "modifier.multitarget", "!player.buff(Ascendance)", "!player.buff(Ancestral Swiftness)", "!player.buff(Spiritwalker's Grace)" } },	
+	{ "Lightning Bolt", { "player.moving", "!player.buff(Ancestral Swiftness)", "!player.buff(Spiritwalker's Grace)" } },
 	
 	-- AE
+--	{ "Earthquake", "ground" },  -- Turn on if you want auto Earthquake at mouse location.
 	{ "Chain Lightning", { "modifier.multitarget", "!player.buff(Ascendance)" } },
 	{ "Lava Beam", { "modifier.multitarget", "player.buff(Ascendance)" } },
 
 	-- Main Rotation
+	{ "Unleashed Flame" },
 	{ "Flame Shock", "target.debuff(Flame Shock).duration <= 3" },
 	{ "Lava Burst" },
 	{ "Elemental Blast" },
-	{ "Earth Shock", { "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 6" } },
+	{ "Earth Shock", { "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 15" } },
+	{ "Ancestral Swiftness" },	
 	{ "Chain Lightning", "toggle.cleavemode" },
+	{ "Searing Totem", { "!modifier.multitarget", "!player.totem(Fire Elemental Totem)", "!player.totem(Searing Totem)" } },
 	{ "Lightning Bolt" },
 		
 }, {
@@ -63,7 +65,6 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	{ "pause", "modifier.lalt" },
 	
 	-- Buffs
-	{ "Flametongue Weapon", "!player.enchant.mainhand" },
 	{ "Lightning Shield", "!player.buff(Lightning Shield)" },
 
 },
