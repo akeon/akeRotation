@@ -45,9 +45,11 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	
 	-- AE
 --	{ "Earthquake", "ground" },  -- Turn on if you want auto Earthquake at mouse location.
-	{ "Chain Lightning", { "modifier.multitarget", "!player.buff(Ascendance)" } },
 	{ "Lava Beam", { "modifier.multitarget", "player.buff(Ascendance)" } },
-
+	{ "Earth Shock", { "modifier.multitarget", "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 15" } },
+	{ "Searing Totem", { "modifier.multitarget", "!player.totem(Fire Elemental Totem)", "!player.totem(Searing Totem)" } },
+	{ "Chain Lightning", { "modifier.multitarget", "!player.buff(Ascendance)" } },
+	
 	-- Main Rotation
 	{ "Unleashed Flame" },
 	{ "Flame Shock", "target.debuff(Flame Shock).duration <= 3" },
