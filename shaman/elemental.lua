@@ -3,9 +3,7 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Version: 1.4 14/10/14 Added survival toggle (cleanse / auto windwalk totem)
 -- Version: 1.3 14/10/14 Overhaul for 6.0.2. Add Unleash elements. Add Anscestral Swiftness. Revamp movement rotation in light of lightning bolt change.
 -- Version: 1.2 21/09/14 (MOP)
--- Changelog: 1.2 Added earthquake.
--- Changelog: 1.1 Further cast while moving optimisations.
--- Changelog: 1.0 Review and adapted from BlackBurn (Credits to him for the platform to work off).
+-- Version: 1.0 Review and adapted from BlackBurn (Credits to him for the platform to work off).
 
 -- Notes: Manually cast Thunderstorm, Earth Elemental, damage reductions, Earthbind and other utility totems for optimal use.
 -- Pause: Left Alt
