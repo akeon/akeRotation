@@ -1,13 +1,11 @@
  -- ProbablyEngine Rotation Packager
 PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 -- Author: AkeRotations
--- Credits: Blackburn
--- Version: 1.0 22/09/14 (MOP)
-
--- Changelog: 1.0 Added AE. Release
--- Changelog: 0.9 Beta testing TBC
--- Changelog: 0.2 Add self heal options.
--- Changelog: 0.1 Initial port
+-- Version: 1.3 14/10/14 Overhaul for 6.0.2. - Remove 
+-- Version: 1.0 Added AE. Release
+-- Version: 0.9 Beta testing TBC
+-- Version: 0.2 Add self heal options.
+-- Version: 0.1 Initial port
 
 -- Notes: Holy Prism uncoded. Raid survivability is untested.
 -- Pause: Left Alt
