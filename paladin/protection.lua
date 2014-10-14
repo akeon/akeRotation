@@ -1,5 +1,5 @@
  -- ProbablyEngine Rotation Packager
-PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
+ProbablyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 -- Author: AkeRotations
 -- Version: 1.3 14/10/14 Overhaul for 6.0.2. - Remove 
 -- Version: 1.0 Added AE. Release
@@ -55,7 +55,7 @@ PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 	-- Out of Melee
 	{ "Judgment", "!target.spell(Crusader Strike).range" },
 	{ "Avenger's Shield", "!target.spell(Crusader Strike).range" },
-    { "Hammer of Wrath", "!target.spell(Crusader Strike).range" },
+    	{ "Hammer of Wrath", "!target.spell(Crusader Strike).range" },
 	{ "Execution Sentence", "!target.spell(Crusader Strike).range" },
 
 	-- AE DPS Rotation
@@ -91,8 +91,8 @@ PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
   
 },
 function()
-	PossiblyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
-	PossiblyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
-	PossiblyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
+	ProbablyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
+	ProbablyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
+	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
 end
 )
