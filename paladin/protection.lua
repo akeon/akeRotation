@@ -7,7 +7,7 @@ PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 -- Version: 0.2 Add self heal options.
 -- Version: 0.1 Initial port
 
--- Notes: Holy Prism uncoded. Raid survivability is untested.
+-- Notes: --Move Holy Wrath above Avengers shield if you took the Sanctified Wrath talent.
 -- Pause: Left Alt
 -- Lights Hammer: Left Control
 
@@ -38,12 +38,10 @@ PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 	{ "Rebuke", "modifier.interrupt" },
 	
 	--Cooldowns
-	{ "Avenging Wrath", "modifier.cooldowns" },   
 	{ "Holy Avenger", { "modifier.cooldowns", "player.holypower < 3" } },
 		
  	-- Survivability
 	{ "Hand of Freedom", { "toggle.raidheal", "!player.buff", "player.state.root" }, "player" },
-	{ "Hand of Freedom", { "toggle.raidheal", "!player.buff", "player.state.snare" }, "player" },
 	{ "Cleanse", { "!modifier.last(Cleanse)", "player.dispellable(Cleanse)" }, "player" },
 	
     -- Raid Protection
@@ -61,22 +59,22 @@ PossiblyEngine.rotation.register_custom(66, "akeProtectionPaladin", {
 	{ "Execution Sentence", "!target.spell(Crusader Strike).range" },
 
 	-- AE DPS Rotation
-	{ "Hammer of the Righteous", "modifier.multitarget" },
-	{ "Judgment", "modifier.multitarget" },
 	{ "Avenger's Shield", { "modifier.multitarget", "player.buff(Grand Crusader)" } },
-	{ "Consecration", { "modifier.multitarget", "target.spell(Crusader Strike).range", "!player.moving" } },
+	{ "Hammer of the Righteous", { "target.spell(Crusader Strike).range", "modifier.multitarget" } },
+	{ "Judgment", "modifier.multitarget" },
 	{ "Avenger's Shield", "modifier.multitarget" },
-	{ "Holy Wrath", { "modifier.multitarget", "target.spell(Crusader Strike).range" } },
+	{ "Consecration", { "modifier.multitarget", "target.spell(Crusader Strike).range", "!player.moving" } },
+	{ "Holy Wrath", { "modifier.multitarget", "target.spell(Crusader Strike).range" } }, --Move above AS if you took sanctified wrath.
+	{ "Hammer of Wrath" },
 	
 	-- Single Target DPS Rotation
-	{ "Crusader Strike" },
+	{ "Crusader Strike", "target.spell(Crusader Strike).range" },
 	{ "Judgment" },
 	{ "Avenger's Shield" },
 	{ "Execution Sentence" },
-	{ "Holy Wrath", "target.spell(Crusader Strike).range" },
-    { "Hammer of Wrath" },	
+	{ "Hammer of Wrath" },	
 	{ "Consecration", { "target.spell(Crusader Strike).range", "!player.moving" } },
-
+	{ "Holy Wrath", "target.spell(Crusader Strike).range" }, --Move above AS if you took sanctified wrath.
 },{
 -- OUT OF COMBAT ROTATION
 
