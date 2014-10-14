@@ -1,5 +1,5 @@
 -- ProbablyEngine Rotation Packager
-PossiblyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
+ProbablyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
 -- Author: AkeRotations
 
 -- Version 1.3 14/10/14 Overhaul for 6.0.2
@@ -81,9 +81,9 @@ PossiblyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
 		
  },
 function()
-	PossiblyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
-	PossiblyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
-	PossiblyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
+	ProbablyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
+	ProbablyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
+	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
 end
 )
 
