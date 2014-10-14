@@ -82,7 +82,7 @@ ProbablyEngine.rotation.register_custom(70, "akeRetributionPaladin", {
  },
 function()
 	ProbablyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Automaticaly target the nearest enemy when target dies or does not exist.')
-	ProbablyEngine.toggle.create('raidheal', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
+	ProbablyEngine.toggle.create('raidprotection', 'Interface\\Icons\\spell_holy_sealofprotection', 'Raid Protection', 'Toggles usage of Hand spells and Flash of Light procs on the raid.')
 	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Self heal', 'Toggles usage of self healing such as flash of light and Word of Glory.')
 end
 )
