@@ -1,4 +1,4 @@
-PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
+ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Author: AkeRotations
 -- Version: 1.4 14/10/14 Added survival toggle (cleanse / auto windwalk totem)
 -- Version: 1.3 14/10/14 Overhaul for 6.0.2. Add Unleash elements. Add Anscestral Swiftness. Revamp movement rotation in light of lightning bolt change.
@@ -74,10 +74,10 @@ PossiblyEngine.rotation.register_custom(262, "akeElementalShaman", {
 
 },
 function()
-	PossiblyEngine.toggle.create('cleavemode', 'Interface\\Icons\\spell_nature_chainlightning', 'Cleave Mode', 'Enables cleave mode - Lower priority than multi-target.')
-	PossiblyEngine.toggle.create('survival', 'Interface\\Icons\\spell_frost_frostshock', 'Snare and Curse Removal', 'Enables automatic removal of roots, snares and curses.')
-	PossiblyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Enable Healing', 'Enable self healing logic')
-	PossiblyEngine.toggle.create('mouseovers', 'Interface\\Icons\\spell_fire_flameshock', 'Enable Mouseovers', 'Enable multi-target flameshock logic.')
-	PossiblyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Enable auto target nearest enemy logic.')
+	ProbablyEngine.toggle.create('cleavemode', 'Interface\\Icons\\spell_nature_chainlightning', 'Cleave Mode', 'Enables cleave mode - Lower priority than multi-target.')
+	ProbablyEngine.toggle.create('survival', 'Interface\\Icons\\spell_frost_frostshock', 'Snare and Curse Removal', 'Enables automatic removal of roots, snares and curses.')
+	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Enable Healing', 'Enable self healing logic')
+	ProbablyEngine.toggle.create('mouseovers', 'Interface\\Icons\\spell_fire_flameshock', 'Enable Mouseovers', 'Enable multi-target flameshock logic.')
+	ProbablyEngine.toggle.create('autotarget', 'Interface\\Icons\\ability_hunter_snipershot', 'Auto Target', 'Enable auto target nearest enemy logic.')
 end
 )
