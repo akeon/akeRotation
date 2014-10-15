@@ -54,7 +54,7 @@ ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	{ "Chain Lightning", { "modifier.multitarget", "!player.buff(Ascendance)" } },
 	
 	-- Main Rotation
-	{ "Unleash Flame" },
+	{ "Unleash Flame", "talent(6, 1)" },
 	{ "Flame Shock", "target.debuff(Flame Shock).duration <= 3" },
 	{ "Lava Burst" },
 	{ "Elemental Blast" },
