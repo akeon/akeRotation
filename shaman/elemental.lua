@@ -1,5 +1,6 @@
 ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Author: AkeRotations
+-- Version: 1.5 15/10/14 Modified so will only use unleash flame if talent unleashed fury exists.
 -- Version: 1.4 14/10/14 Added survival toggle (cleanse / auto windwalk totem)
 -- Version: 1.3 14/10/14 Overhaul for 6.0.2. Add Unleash elements. Add Anscestral Swiftness. Revamp movement rotation in light of lightning bolt change.
 -- Version: 1.2 21/09/14 (MOP)
