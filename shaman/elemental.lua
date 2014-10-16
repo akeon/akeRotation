@@ -66,7 +66,7 @@ ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	{ "Lava Burst" },
 	{ "Earth Shock", { "player.buff(Lightning Shield)", "player.buff(Lightning Shield).count >= 15" } },
 	{ "Elemental Blast" },
-	{ "Chain Lightning", "toggle.cleavemode" },
+	{ "Chain Lightning", { (function() return UnitsAroundUnit('target', 10) >= 2 end), "!toggle.cleavemode" } },
 	{ "Searing Totem", { "!modifier.multitarget", "!player.totem(Fire Elemental Totem)", "!player.totem(Searing Totem)" } },
 	{ "Lightning Bolt" },
 		
@@ -80,7 +80,7 @@ ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 
 },
 function()
-	ProbablyEngine.toggle.create('cleavemode', 'Interface\\Icons\\spell_nature_chainlightning', 'Cleave Mode', 'Enables cleave mode - Lower priority than multi-target.')
+	ProbablyEngine.toggle.create('cleavemode', 'Interface\\Icons\\spell_nature_chainlightning', 'Disable Cleaves', 'Disables automatic casting of chain lightning when 2 or more enemies exist.')
 	ProbablyEngine.toggle.create('survival', 'Interface\\Icons\\spell_frost_frostshock', 'Snare and Curse Removal', 'Enables automatic removal of roots, snares and curses.')
 	ProbablyEngine.toggle.create('selfheal', 'Interface\\Icons\\spell_nature_riptide', 'Enable Healing', 'Enable self healing logic')
 	ProbablyEngine.toggle.create('mouseovers', 'Interface\\Icons\\spell_fire_flameshock', 'Enable Mouseovers', 'Enable multi-target flameshock logic.')
