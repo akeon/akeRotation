@@ -1,5 +1,6 @@
 ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Author: AkeRotations
+-- Version: 1.7 16/10/14 Added automatic cleave detection. Now requires FireHack.
 -- Version: 1.6 16/10/14 Remove death timer condition
     -- Add support for Ancestral swiftness
     -- Optimize logic for earthshock or flameshock.
