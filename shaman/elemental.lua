@@ -1,5 +1,6 @@
 ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 -- Author: AkeRotations
+-- Version: 1.6 16/10/14 Remove death timer condition. THis is not currently implimented.
 -- Version: 1.5 15/10/14 Modified so will only use unleash flame if talent unleashed fury exists.
 -- Version: 1.4 14/10/14 Added survival toggle (cleanse / auto windwalk totem)
 -- Version: 1.3 14/10/14 Overhaul for 6.0.2. Add Unleash elements. Add Anscestral Swiftness. Revamp movement rotation in light of lightning bolt change.
@@ -29,7 +30,7 @@ ProbablyEngine.rotation.register_custom(262, "akeElementalShaman", {
 	{ "Cleanse Spirit", { "toggle.survival", "!modifier.last(Cleanse Spirit)", "player.dispellable(Cleanse Spirit)" }, "player" }, 
  
 	-- Control Toggles
-	{ "Flame Shock", { "!modifier.multitarget", "mouseover.enemy", "mouseover.alive", "mouseover.deathin > 25", "mouseover.debuff(Flame Shock).duration <= 3", "toggle.mouseovers" }, "mouseover" },
+	{ "Flame Shock", { "!modifier.multitarget", "mouseover.enemy", "mouseover.alive", "mouseover.debuff(Flame Shock).duration <= 3", "toggle.mouseovers" }, "mouseover" },
 	{ "Earthquake", { "modifier.lcontrol" }, "ground" },
 
 	-- Cooldowns
